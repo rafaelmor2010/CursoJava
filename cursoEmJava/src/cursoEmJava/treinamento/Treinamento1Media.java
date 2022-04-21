@@ -2,7 +2,7 @@ package cursoEmJava.treinamento;
 
 public class Treinamento1Media {
 	public static void main(String[] args) {
-		
+		//testando 
 		double nota1 = 10;
 		double nota2 = 10;
 		double nota3 = 10;

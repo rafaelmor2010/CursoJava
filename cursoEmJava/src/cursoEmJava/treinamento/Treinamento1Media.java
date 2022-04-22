@@ -3,7 +3,7 @@ package cursoEmJava.treinamento;
 public class Treinamento1Media {
 	public static void main(String[] args) {
 		//testando 
-		double nota1 = 5;
+		double nota1 = 6;
 		double nota2 = 6;
 		double nota3 = 6;
 		double nota4 = 6;
@@ -24,9 +24,12 @@ public class Treinamento1Media {
 			System.out.println("Ótimo");
 			System.out.println(nomeAluno+ " sua média é : " +mediaTotal+ " você esta de exame");
 			
-		}else {
+		}else if (mediaTotal >= 0 && nomeAluno.equals("Rafael Morales"))  {
 			System.out.println("Deu ruim");
 			System.out.println(nomeAluno+ " sua média é : " +mediaTotal+ " você esta reprovado ");
+		}
+		else {
+			System.out.println("Aluno não foi encontrado");
 		}
 		
 	}

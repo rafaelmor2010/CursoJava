@@ -6,7 +6,7 @@ public class RepeticaoForAté10 {
 		String nome = "Rafael Morales";
 		String curso = "Java";
 		
-		System.out.println("Programa Repetição 10X");
+		System.out.println("Programa Repetição 10Xxxx");
 		
 		if (curso.equals("Java")) {
 			

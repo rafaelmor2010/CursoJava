@@ -65,6 +65,15 @@ public class MainPrincipal {
 		System.out.println("Resultado 2 foi : "+(aluno1.getAlunoAprovado2()));
 		
 		/*-------------------------------------------------------------------*/
+		System.out.println("\n------------Utilizando toString mostrar no console------------------");
+		
+		System.out.println(aluno1.toString());
+		System.out.println("Sua Média é :" +aluno1.getMedia());
+		System.out.println("Resultado foi :"+aluno1.getAlunoAprovado2());
+		
+		
+		
+		
 		System.out.println("\n----------------------------------------------------");
 		
 		Aluno aluno2 = new Aluno();

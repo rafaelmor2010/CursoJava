@@ -14,10 +14,21 @@ public class Aluno {
 	private String nomeEscola;
 	private String serieMatriculado;
 	
-	private double nota1;
-	private double nota2;
-	private double nota3;
-	private double nota4;
+//chamando a o objeto da classe Disciplina
+	
+	Disciplina disciplina = new Disciplina();
+	//usando set e get da classe Disciplina
+	public void setDisciplina(Disciplina disciplina) {
+		this.disciplina = disciplina;
+		
+	}
+	
+	public Disciplina getDisciplina() {
+		return disciplina;
+		
+	}
+	
+	
 	
 	
 	
@@ -131,41 +142,17 @@ public class Aluno {
 	}
 	
 	/*---------------------------------------------------------*/
-	public void setNota1 (double nota1) {
-		this.nota1 = nota1;
-	}
+
 	
-	public double getNota1() {
-		return nota1;
-	}
 	
-	public void setNota2 (double nota2) {
-		this.nota2 = nota2;
-	}
 	
-	public double getNota2() {
-		return nota2;
-	}
 	
-	public void setNota3 (double nota3) {
-		this.nota3 = nota3;
-	}
 	
-	public double getNota3() {
-		return nota3;
-	}
 	
-	public void setNota4 (double nota4) {
-		this.nota4 = nota4;
-	}
 	
-	public double getNota4() {
-		return nota4;
-	}
-	
-	/*Método get para calcular média das notas*/
+	/*pecando do obejeto Disciplina Método get para calcular média das notas*/
 	public double getMedia() {
-		return (nota1 + nota2 + nota3 + nota4 )/4;
+		return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4() )/4;
 	}
 	
 	/*Método get media Apovado ou reprovado*/
@@ -189,14 +176,50 @@ public class Aluno {
 		}
 	}
 	/*Utilizando metodo toString para mostrar os dados no console*/
+	
+	
+	
+	
+ 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((numeroCpf == null) ? 0 : numeroCpf.hashCode());
+		result = prime * result + ((registroGeral == null) ? 0 : registroGeral.hashCode());
+		return result;
+	}
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", nota1=" + nota1 + ", nota2=" + nota2 + ", nota3=" + nota3 + ", nota4=" + nota4
-				+ "]";
+				+ serieMatriculado + ", disciplina=" + disciplina + "]";
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Aluno other = (Aluno) obj;
+		if (numeroCpf == null) {
+			if (other.numeroCpf != null)
+				return false;
+		} else if (!numeroCpf.equals(other.numeroCpf))
+			return false;
+		if (registroGeral == null) {
+			if (other.registroGeral != null)
+				return false;
+		} else if (!registroGeral.equals(other.registroGeral))
+			return false;
+		return true;
+	} 
+	
+	/*para poder verificar se tem igual mesmo CPF e Rg    equals e hashCode*/
 	
 	
 	
